@@ -46,7 +46,8 @@
 3.  **Run the Application**
     You have two options to run SuperShredder:
 
-Option A: Run from Source Launch the application directly using Python:
+Option A: Run from Source Launch the application directly using Python:  
+
     ```bash
     python main.py
     ```  
