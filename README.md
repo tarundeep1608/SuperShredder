@@ -1,6 +1,7 @@
 # SuperShredder
 
 **SuperShredder** is a powerful, cross-platform security tool designed to securely erase data from Windows file systems and Android devices. Built with a modern, "hacker-style" frameless GUI using PyQt6, it ensures that deleted files are unrecoverable by utilizing military-grade encryption and multi-pass overwriting techniques.
+**Self-Contained & Portable:** This tool comes with bundled ADB binaries, eliminating the need for complex system configuration. It also includes a build script to compile the application into a standalone `.exe` file.
 
 ## 🚀 Features
 
@@ -32,7 +33,7 @@
 ### Steps
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/tarundeep1608/supershredder.git
+    git clone https://github.com/tarundeep1608/supershredder
     cd supershredder
     ```
 
@@ -43,9 +44,20 @@
     ```
 
 3.  **Run the Application**
+    You have two options to run SuperShredder:
+
+Option A: Run from Source Launch the application directly using Python:
     ```bash
     python main.py
     ```
+Option B: Build Standalone Executable. Use the provided build script to create a portable .exe file. This will bundle all dependencies and the ADB binaries into a single file.
+   ```bash
+   python build.py
+   ```
+
+The build script checks for adb.exe and DLLs in the bin/ folder and bundles them.
+Once finished, the executable will be available at: dist/SuperShredder.exe
+   
 
 ---
 
@@ -69,6 +81,7 @@
 ```text
 SuperShredder/
 ├── main.py                 # Application entry point & Main Window UI
+├── build.py                # PyInstaller build script for creating .exe
 ├── requirements.txt        # Python dependencies
 ├── gui/                    # UI Components
 │   ├── theme.py            # Stylesheets
@@ -81,6 +94,7 @@ SuperShredder/
 │       ├── strategies.py   # Wipe strategy logic
 │       ├── physical_wiper.py
 │       └── emulator_wiper.py
+├── bin/                    # Bundled ADB binaries (adb.exe, AdbWinApi.dll, etc.)
 └── common/                 # Shared utilities
 
 ```
