@@ -47,10 +47,9 @@
     You have two options to run SuperShredder:
 
 Option A: Run from Source Launch the application directly using Python:  
-
-    ```bash
-    python main.py
-    ```  
+   ```bash
+   python main.py
+   ```   
     
 Option B: Build Standalone Executable. Use the provided build script to create a portable .exe file. This will bundle all dependencies and the ADB binaries into a single file.
    ```bash
